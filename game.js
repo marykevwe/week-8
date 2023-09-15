@@ -33,12 +33,27 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === 'paper' && computerSelection === 'rock')
   ) {
     console.log('You Win!');
+    if (playerSelection === 'rock' && computerSelection === 'scissors') {
+      console.log('Rock smashes Scissors');
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+      console.log('Scissors cuts Paper');
+    } else {
+      console.log('Paper covers Rock');
+    }
     return 'You Win!';
   } else {
     console.log('You Lose!');
+    if (computerSelection === 'rock' && playerSelection === 'scissors') {
+      console.log('Rock smashes Scissors');
+    } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
+      console.log('Scissors cuts Paper');
+    } else {
+      console.log('Paper covers Rock');
+    }
     return 'You Lose!';
   }
 }
+
 
 function game() {
   let playerScore = 0;
